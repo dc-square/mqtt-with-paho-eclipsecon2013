@@ -1,4 +1,4 @@
-= Bringing M2M to the web with Paho
+== Bringing M2M to the web with Paho
 
 In this repository are all files concerning our http://www.eclipsecon.org/europe2013/bringing-m2m-web-paho-connecting-java-devices-and-online-dashboards-mqtt[Session at EclipseCon Europe 2013] in Ludwigsburg.
 
