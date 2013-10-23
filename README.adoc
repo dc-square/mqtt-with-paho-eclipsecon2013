@@ -1,0 +1,46 @@
+= Bringing M2M to the web with Paho
+
+In this repository are all files concerning our http://www.eclipsecon.org/europe2013/bringing-m2m-web-paho-connecting-java-devices-and-online-dashboards-mqtt[Session at EclipseCon Europe 2013] in Ludwigsburg.
+
+== For attendees
+
+In order to get our feet off the ground quickly at the session, please
+prepare the following things before you come to EclipseCon:
+
+. Make sure you have Java installed (Just for the record ;) )
+
+. Ensure that you have a web browser that supports Websockets! You can find it out http://caniuse.com/websockets[here].
+
+. Install HiveMQ MQTT Broker on your machine
+
+* Download our prepared http://www.dc-square.de/hivemq-eclipsecon.zip[archive] (includes websockets configuration and MQTT Message Log plugin)
+* Unzip
+* Start HiveMQ
+** Windows:
+*** Double click on bin/run.bat in the extracted folder
+** Linux/BSD/MacOSX:
+*** Open Terminal and change to the extracted folder
+*** chmod 755 bin/run.sh
+*** ./bin/run.sh
+* Verify that you see HiveMQ starting with the following output:	
++
+----
+2013-10-23 13:08:04,416 INFO  - Starting on all interfaces and port 1883
+2013-10-23 13:08:04,424 INFO  - Starting with Websockets support on all interfaces and port 8000
+2013-10-23 13:08:04,425 INFO  - Loaded Plugin HiveMQ MQTT Message Log Plugin - v1.0.0
+2013-10-23 13:08:04,427 INFO  - Started HiveMQ 1.4.1 in 6371ms
+----
++
+	
+
+. Install Eclipse Kepler JavaEE Version from the http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplersr1[Eclipse Download Page]
+
+. Monitor this repository. We will upload the slides and the examples we use in the tutorial at the end of the week. Make sure you download these before coming to our session.
+
+. We have a waiting list for the session. Please clarify any questions regarding, if you can attend or not, directly with Eclipse.
+
+We wish you a productive week and looking forward to seeing all of you next Tuesday.
+
+Best regards,
+
+Dominik (https://twitter.com/dobermai/[@dobermai]) & Christian (https://twitter.com/goetzchr[@goetzchr])
