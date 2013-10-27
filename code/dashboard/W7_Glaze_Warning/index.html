@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Weather Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+    <!-- Custom styles for the app -->
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- Weather icons -->
+    <link href="lib/weather-icons/css/weather-icons.min.css" rel="stylesheet"/>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Weather Dashboard</a>
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+</div>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Hello, EclipseCon!</h1>
+
+        <p>This is a template for creating your MQTT Dashboard for the Eclipsecon 2013 Session <span
+                class="label label-info">"Bringing M2M to the web
+            with Paho: Connecting Java Devices and online dashboards with MQTT"</span></p>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div id="glaze_warning" class="alert alert-danger hide">
+        <h4>Glaze Warning!</h4>
+
+        <p>Take care while driving, it could be icy today!</p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>Temperature</h2>
+
+            <div id="gauge" class="gauge"></div>
+
+        </div>
+        <div class="col-lg-4">
+            <h2>Weather</h2>
+            <i id="weathericon" class="wi-cloud-refresh weather-icon"></i>
+
+        </div>
+        <div class="col-lg-4">
+            <h2>Control Center</h2>
+
+            <div id="client_connected" class="alert alert-success hide"></div>
+            <div id="client_disconnected" class="alert alert-danger hide"></div>
+
+            <strong>Reconfigure the simulator update interval</strong>
+
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <div class="input-group" style="width: 150px">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                        <input id="intervalinput" type="text" class="form-control" placeholder="seconds">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" onclick="publishInterval($('#intervalinput').val())">
+                        Update
+                        Interval
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>developed with <font color="red">&hearts;</font> at EclipseCon Europe 2013</p>
+    </footer>
+</div>
+<!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/justgage/raphael.2.1.0.min.js"></script>
+<script src="lib/justgage/justgage.1.0.1.min.js"></script>
+<script src="lib/paho/paho.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
